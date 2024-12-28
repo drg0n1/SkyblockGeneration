@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "skyblockgen",
+	"version": "${version}",
+	"name": "SkyblockGen",
+	"description": "This mod aims to change world generation for minecraft to allow players to play skyblock without relying on existing maps.",
+	"authors": [
+		"drg0n"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/skyblockgen/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.drg0n.sbgen.SkyblockGen"
+		],
+		"client": [
+			"net.drg0n.sbgen.SkyblockGenClient"
+		],
+		"fabric-datagen": [
+			"net.drg0n.sbgen.SkyblockGenDataGenerator"
+		]
+	},
+	"mixins": [
+		"skyblockgen.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.9",
+		"minecraft": "~1.21.4",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
